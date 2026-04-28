@@ -1,12 +1,14 @@
-let title = document.getElementById('title');
-let content = document.getElementById('content');
+const title = document.getElementById('title');
+const content = document.getElementById('content');
 const notesList = document.getElementById('note_list');
 let notes = [];
 
-function addNote() {    
+function addNote() {
+    const titleValue = title.value;
+    const contentValue = content.value; 
     notes.push({
-        title: title.value,
-        content: content.value,
+        title: titleValue,
+        content: contentValue,
     })    
 }
 
