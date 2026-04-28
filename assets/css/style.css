@@ -7,4 +7,10 @@
 
 body {
 	font-family: arial;
+    background-color: #F8EADC;
+}
+
+main {    
+    width: 90%;
+    margin: 30px auto 0 auto;
 }
