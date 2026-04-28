@@ -14,12 +14,18 @@
         <header>
             <h1>Notes</h1>
             <form class="add-note">
-                <label for="note_input">Add a note</label>               
-                <input type="text" id="note_input">                
+                <div>
+                    <label for="note_title">Add your note title</label>               
+                    <input type="text" id="note_title">
+                </div>
+                  <div>
+                    <label for="note_content">Add your note</label>               
+                    <textarea id="note_content"></textarea>
+                </div>
+                               
                 <button class="add-button" onclick="addNote()">ADD NOTE</button>
             </form>
-        </header>
-        
+        </header>        
               
     </main>
 				
