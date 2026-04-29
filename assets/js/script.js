@@ -22,7 +22,7 @@ function displayNotes() {
         buttonContainer.append(deleteButton);        
         container.append(noteContent);
         container.append(buttonContainer);
-        notesList.append(container);
+        noteList.append(container);
     }
 }
 
