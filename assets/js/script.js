@@ -19,8 +19,7 @@ function displayNotes() {
         deleteButton.className = 'delete-button';
         deleteButton.textContent = 'DELETE';
         buttonContainer.append(editButton);
-        buttonContainer.append(deleteButton);
-        container.append(noteTitle);
+        buttonContainer.append(deleteButton);        
         container.append(noteContent);
         container.append(buttonContainer);
         notesList.append(container);
