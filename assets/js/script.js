@@ -2,15 +2,9 @@ let notes = [];
 let noteInput = document.getElementById('note');
 let noteList = document.getElementById('note_list');
 
-function addNote() {
-    let noteValue = noteInput.value;
-    notes.push(noteValue);  
-    displayNotes();  
-    noteInput.value = '';  
-}
-
 function displayNotes() {
-    notes.forEach((note, noteIndex) => {
+    noteList.innerHTML = null;
+    for(const[idx, note] of Object.entries(notes)) {
         const container = document.createElement('div');
         container.className = 'note-container';               
         const noteContent = document.createElement('p');
@@ -30,7 +24,16 @@ function displayNotes() {
         container.append(noteContent);
         container.append(buttonContainer);
         notesList.append(container);
-    })
+    }
+}
+
+function addNote() {
+    let noteInputValue = noteInput.value;
+    notes.push(noteInputValue);  
+    displayNotes();  
+    noteInput.value = "";  
 }
 
 console.log(notes);
+
+document.addEventListener("DOMContentLoaded", displayNotes)
