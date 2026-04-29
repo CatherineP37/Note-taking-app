@@ -1,27 +1,21 @@
-const title = document.getElementById('title');
-const content = document.getElementById('content');
-const notesList = document.getElementById('note_list');
+const note = document.getElementById('note');
+const noteList = document.getElementById('note_list');
 let notes = [];
 
 function addNote() {
-    const titleValue = title.value;
-    const contentValue = content.value; 
-    notes.push({
-        title: titleValue,
-        content: contentValue,
-    })    
+    let noteValue = note.value;
+    notes.push(noteValue);  
+    displayNotes();  
+    note.value = '';  
 }
 
 function displayNotes() {
     notes.forEach((note, noteIndex) => {
         const container = document.createElement('div');
-        container.className = 'note-container';
-        const noteTitle = document.createElement('h2');
-        noteTitle.className = 'note-title';
-        noteTitle.textContent = note.title;        
+        container.className = 'note-container';               
         const noteContent = document.createElement('p');
         noteContent.className = 'note-content';
-        noteContent.textContent = note.content;
+        noteContent.textContent = note;
         const buttonContainer = document.createElement('div');
         buttonContainer.className = 'button-container';
         const editButton = document.createElement('button');
