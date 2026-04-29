@@ -9,5 +9,7 @@ function addNote() {
 
 console.log(notes);
 
+addNote();
+
 
 
