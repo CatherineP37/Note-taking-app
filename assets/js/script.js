@@ -1,12 +1,12 @@
-const note = document.getElementById('note');
-const noteList = document.getElementById('note_list');
 let notes = [];
+let noteInput = document.getElementById('note');
+let noteList = document.getElementById('note_list');
 
 function addNote() {
-    let noteValue = note.value;
+    let noteValue = noteInput.value;
     notes.push(noteValue);  
     displayNotes();  
-    note.value = '';  
+    noteInput.value = '';  
 }
 
 function displayNotes() {
