@@ -4,7 +4,8 @@ let noteList = document.getElementById('note_list');
 
 function addNote() {
   let noteInputValue = noteInput.value;  
-  notes.push(noteInputValue);  
+  notes.push(noteInputValue);
+  noteInput.value = ''; 
 }
 
 console.log(notes);
