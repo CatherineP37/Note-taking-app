@@ -1,5 +1,5 @@
-let notes = [];
-let noteInput = document.getElementById('note');
+let notes = []
+let noteInput = document.getElementById('note_input');
 let noteList = document.getElementById('note_list');
 
 function addNote() {
@@ -8,8 +8,5 @@ function addNote() {
 }
 
 console.log(notes);
-
-addNote();
-
 
 
