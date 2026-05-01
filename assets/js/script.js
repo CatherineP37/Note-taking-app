@@ -4,9 +4,14 @@ let noteList = document.getElementById('note_list');
 
 function displayList() {
   taskList.innerHTML = null;
-  for(const[idx, item] of Object.entries(tasks)) {
-    const container = document.createElement('div');    
-    taskList.appendChild(container);
+  for(const[i, note] of Object.entries(notes)) {
+    const container = document.createElement('div');
+    container.className = 'note-container';
+    const p = document.createElement('p');
+    p.className = 'note-content';
+    p.textContent = note;
+    container.append(p);
+    noteList.append(container);
   }
 }
 
