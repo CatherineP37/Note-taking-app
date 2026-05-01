@@ -118,7 +118,7 @@ h1 {
     cursor: pointer;
 }
 
-#note-list {
+#note_list {
     width: 100%;
     display: flex;
     flex-direction: column;
