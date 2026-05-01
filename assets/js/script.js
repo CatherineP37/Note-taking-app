@@ -18,7 +18,8 @@ function displayList() {
     editButton.textContent = 'EDIT';
     const deleteButton = document.createElement('button');
     deleteButton.className = 'delete-button';
-    deleteButton.textContent = 'DELETE';    
+    deleteButton.textContent = 'DELETE';
+    deleteButton.onclick = () => deleteNote(i);   
     buttonContainer.append(editButton);
     buttonContainer.append(deleteButton);
     container.append(buttonContainer);
@@ -31,6 +32,11 @@ function addNote() {
   notes.push(noteInputValue);
   displayList();
   noteInput.value = ''; 
+}
+
+function deleteNote(i) {
+  notes.splice(i, 1);
+  displayList();
 }
 
 document.addEventListener("DOMContentLoaded", displayList)
