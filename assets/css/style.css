@@ -80,7 +80,7 @@ h1 {
     gap: 8px;
 }
 
-.note-content {
+.input-label, .note-content {
     color: #585858;
 }
 
