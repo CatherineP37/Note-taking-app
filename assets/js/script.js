@@ -11,6 +11,13 @@ function displayList() {
     p.className = 'note-content';
     p.textContent = note;
     container.append(p);
+    const buttonContainer = document.createElement('div');
+    buttonContainer.className = 'button-container';
+    const editButton = document.createElement('button');
+    editButton.className = 'edit-button';
+    editButton.textContent = 'EDIT';
+    buttonContainer.append(editButton);
+    container.append(buttonContainer);
     noteList.append(container);
   }
 }
