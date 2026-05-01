@@ -3,7 +3,7 @@ let noteInput = document.getElementById('note_input');
 let noteList = document.getElementById('note_list');
 
 function displayList() {
-  taskList.innerHTML = null;
+  noteList.innerHTML = null;
   for(const[i, note] of Object.entries(notes)) {
     const container = document.createElement('div');
     container.className = 'note-container';

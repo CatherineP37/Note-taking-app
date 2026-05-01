@@ -71,6 +71,7 @@ h1 {
 }
 
 .note-container {
+    background-color: #FFFFFF;
     width: 100%;
     padding: 1rem;
     border-radius: 8px;
@@ -80,7 +81,7 @@ h1 {
 }
 
 .note-content {
-    color: #8F8B87;
+    color: #585858;
 }
 
 .button-container {
