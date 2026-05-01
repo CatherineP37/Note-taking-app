@@ -16,7 +16,11 @@ function displayList() {
     const editButton = document.createElement('button');
     editButton.className = 'edit-button';
     editButton.textContent = 'EDIT';
+    const deleteButton = document.createElement('button');
+    deleteButton.className = 'delete-button';
+    deleteButton.textContent = 'DELETE';    
     buttonContainer.append(editButton);
+    buttonContainer.append(deleteButton);
     container.append(buttonContainer);
     noteList.append(container);
   }
