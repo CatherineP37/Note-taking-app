@@ -1,10 +1,15 @@
 let notes = []
 let noteInput = document.getElementById('note_input');
 let noteList = document.getElementById('note_list');
-let form = document.getElementById('form');
+let addModal = document.querySelector('.add');
+let editModal = document.querySelector('.edit');
 
-function open() {
-  form.style.display = 'block';
+function openAddModal() {
+  addModal.classList.toggle('open');
+}
+
+function openEditModal() {
+  editModal.classList.toggle('open');
 }
 
 function displayList() {
@@ -21,6 +26,7 @@ function displayList() {
     const editButton = document.createElement('button');
     editButton.className = 'edit-button';
     editButton.textContent = 'EDIT';
+    editButton.onclick = () => openEditModal();
     const deleteButton = document.createElement('button');
     deleteButton.className = 'delete-button';
     deleteButton.textContent = 'DELETE';
@@ -42,6 +48,11 @@ function addNote() {
 function deleteNote(i) {
   notes.splice(i, 1);
   displayList();
+}
+
+function openEditModal() {
+  
+  
 }
 
 document.addEventListener("DOMContentLoaded", displayList)

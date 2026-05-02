@@ -30,23 +30,27 @@ h1 {
     color: #75B5BB;
 }
 
-.add-note {
+.add, .edit {
+    display: none;
     background-color: #FFFFFF;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    width: 100%;    
     border-radius: 8px;
     padding: 1rem;
 }
 
-.add-note div {
+.open {    
+    display: flex;
+    flex-direction: column;
+    gap: 16px;   
+}
+
+.add div, .edit div {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.add-note input, .add-note textarea {
+.add input, .edit input {
     border: 2px solid #CCC8C4;
     border-radius: 2px;
     width: 100%;
@@ -65,7 +69,7 @@ h1 {
     transition-duration: .2s;
 }
 
-.add-note button:hover {
+.add button:hover, .edit button:hover {
     background-color: #60A1A7;
     cursor: pointer;
 }
@@ -117,10 +121,6 @@ h1 {
 .delete-button:hover {
     background-color: #D3644F;
     cursor: pointer;
-}
-
-#form {
-    display: none;
 }
 
 #note_list {

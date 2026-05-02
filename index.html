@@ -13,8 +13,13 @@
     <main>
         <header>
             <h1>Notes</h1>
-            <button onclick="open()">ADD NOTE</button>
-            <section id="form" class="add-note">
+            <button onclick="openAddModal()">ADD NOTE</button>
+            <section class="add">
+                <label for="note_input" class="input-label">Add a note</label>               
+                <input type="text" id="note_input">                
+                <button class="add-button" onclick="addNote()">ADD NOTE</button>
+            </section>
+            <section class="edit">
                 <label for="note_input" class="input-label">Add a note</label>               
                 <input type="text" id="note_input">                
                 <button class="add-button" onclick="addNote()">ADD NOTE</button>
