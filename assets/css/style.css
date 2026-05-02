@@ -119,6 +119,10 @@ h1 {
     cursor: pointer;
 }
 
+#form {
+    display: none;
+}
+
 #note_list {
     width: 100%;
     display: flex;

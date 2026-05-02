@@ -13,12 +13,12 @@
     <main>
         <header>
             <h1>Notes</h1>
-            <button>ADD NOTE</button>
-            <div class="add-note">
+            <button onclick="open()">ADD NOTE</button>
+            <section id="form" class="add-note">
                 <label for="note_input" class="input-label">Add a note</label>               
                 <input type="text" id="note_input">                
                 <button class="add-button" onclick="addNote()">ADD NOTE</button>
-            </div>
+            </section>
         </header>
         
         <ul id="note_list">

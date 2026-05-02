@@ -1,6 +1,11 @@
 let notes = []
 let noteInput = document.getElementById('note_input');
 let noteList = document.getElementById('note_list');
+let form = document.getElementById('form');
+
+function open() {
+  form.style.display = 'block';
+}
 
 function displayList() {
   noteList.innerHTML = null;
