@@ -50,11 +50,6 @@ function deleteNote(i) {
   displayList();
 }
 
-function openEditModal() {
-  
-  
-}
-
 document.addEventListener("DOMContentLoaded", displayList)
 
 
