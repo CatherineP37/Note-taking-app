@@ -37,8 +37,7 @@ function displayList() {
   }
 }
 
-function addNote(event) {
-  event.preventDefault()
+function addNote() { 
   let noteInputValue = noteInput.value;  
   notes.push({
     id: makeId(),
@@ -54,13 +53,12 @@ function makeId() {
 
 function openEditModal(i, note) {
   editModal.classList.toggle('open');
-  editInput.value = note.content;
-  let editedNote = editInput.value;  
-  editButton.onclick = () => editNote(i, editedNote);
+  editInput.value = note.content;  
+  editButton.onclick = () => editNote(i, note);
 }
 
-function editNote(i, editedNote) {
-  const noteIndex = notes.findIndex(editedNote => editedNote.id === noteId)    
+function editNote(i, note) {
+  const noteIndex = notes.findIndex(note => note.id === noteId)    
   notes[noteIndex] = {
     ...notes[noteIndex],
     content: content,
