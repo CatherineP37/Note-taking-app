@@ -39,7 +39,10 @@ function displayList() {
 
 function addNote() {
   let noteInputValue = noteInput.value;  
-  notes.push(noteInputValue);
+  notes.push({
+    id = makeId(),
+    content: noteInputValue,
+  });
   displayList();
   noteInput.value = ''; 
 }
