@@ -46,13 +46,15 @@ function addNote() {
 
 function openEditModal(i, note) {
   editModal.classList.toggle('open');
-  editInput.value = note;  
-  
-  editButton.onclick = (i, note) => {
-    note = editInput.value;
-    const noteIndex = notes.findIndex(note => note.id === noteId)    
-    notes[noteIndex] = note;
-  }
+  editInput.value = note;
+  let editedNote = editInput.value;  
+  editButton.onclick = () => editNote(i, editedNote);
+}
+
+function editNote(i, editedNote) {
+  const noteIndex = notes.findIndex(editedNote => editedNote.id === noteId)    
+  notes[noteIndex] = editedNote;
+  displayList();
 }
 
 function deleteNote(i) {
