@@ -39,6 +39,8 @@ function displayList() {
 function openEditModal(i, note) {
   editModal.classList.toggle('open');
   editInput.value = note;
+  let editedNote = editInput.value;
+  note = editedNote
   editButton.onclick = (i, note) => {
     notes[i] = note;
   }
