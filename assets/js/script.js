@@ -47,6 +47,10 @@ function addNote() {
   noteInput.value = ''; 
 }
 
+function makeId() {
+  return Date.now().toString();
+}
+
 function openEditModal(i, note) {
   editModal.classList.toggle('open');
   editInput.value = note;
