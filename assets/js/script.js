@@ -5,6 +5,7 @@ let editButton = document.getElementById('edit_button');
 let noteList = document.getElementById('note_list');
 let addModal = document.querySelector('.add');
 let editModal = document.querySelector('.edit');
+let noteId = null;
 
 function openAddModal() {
   addModal.classList.toggle('open');
@@ -38,11 +39,12 @@ function displayList() {
 
 function openEditModal(i, note) {
   editModal.classList.toggle('open');
-  editInput.value = note;
-  let editedNote = editInput.value;
-  note = editedNote;
+  editInput.value = note;  
+  
   editButton.onclick = (i, note) => {
-    notes[i] = note;
+    note = editInput.value;
+    const noteIndex = notes.findIndex(note => note.id === noteId)    
+    notes[noteIndex] = note;
   }
 }
 
