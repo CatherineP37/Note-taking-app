@@ -37,7 +37,8 @@ function displayList() {
   }
 }
 
-function addNote() {
+function addNote(event) {
+  event.preventDefault()
   let noteInputValue = noteInput.value;  
   notes.push({
     id: makeId(),
