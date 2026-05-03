@@ -60,7 +60,10 @@ function openEditModal(i, note) {
 
 function editNote(i, editedNote) {
   const noteIndex = notes.findIndex(editedNote => editedNote.id === noteId)    
-  notes[noteIndex] = editedNote;
+  notes[noteIndex] = {
+    ...notes[noteIndex],
+    content: content,
+  };
   displayList();
 }
 
