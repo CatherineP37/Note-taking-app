@@ -40,7 +40,7 @@ function displayList() {
 function addNote() {
   let noteInputValue = noteInput.value;  
   notes.push({
-    id = makeId(),
+    id: makeId(),
     content: noteInputValue,
   });
   displayList();
@@ -53,7 +53,7 @@ function makeId() {
 
 function openEditModal(i, note) {
   editModal.classList.toggle('open');
-  editInput.value = note;
+  editInput.value = note.content;
   let editedNote = editInput.value;  
   editButton.onclick = () => editNote(i, editedNote);
 }
