@@ -18,7 +18,7 @@ function displayList() {
     container.className = 'note-container';
     const p = document.createElement('p');
     p.className = 'note-content';
-    p.textContent = note;
+    p.textContent = note.content;
     container.append(p);
     const buttonContainer = document.createElement('div');
     buttonContainer.className = 'button-container';
