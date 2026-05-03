@@ -37,6 +37,13 @@ function displayList() {
   }
 }
 
+function addNote() {
+  let noteInputValue = noteInput.value;  
+  notes.push(noteInputValue);
+  displayList();
+  noteInput.value = ''; 
+}
+
 function openEditModal(i, note) {
   editModal.classList.toggle('open');
   editInput.value = note;  
@@ -46,13 +53,6 @@ function openEditModal(i, note) {
     const noteIndex = notes.findIndex(note => note.id === noteId)    
     notes[noteIndex] = note;
   }
-}
-
-function addNote() {
-  let noteInputValue = noteInput.value;  
-  notes.push(noteInputValue);
-  displayList();
-  noteInput.value = ''; 
 }
 
 function deleteNote(i) {
