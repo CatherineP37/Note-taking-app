@@ -8,19 +8,22 @@ let noteIndex = null;
 
 function openModal(noteId = null) {
   modal.classList.toggle('open');
+  let saveButton = document.getElementById('save_button')
 
   if(noteId) {
     const noteToEdit = notes.find(note => note === noteId)
     noteIndex = noteId;
     document.getElementById('modalTitle').textContent = 'Edit note';    
     noteInput.value = noteToEdit.content;
-    document.getElementById('save_button').textContent = 'EDIT';
+    saveButton.textContent = 'EDIT';
   } else {
     noteIndex = null;
     document.getElementById('modalTitle').textContent = 'Add note';
     noteInput.value = '';
-    document.getElementById('save_button').textContent = 'ADD';
+    saveButton.textContent = 'ADD';
   }
+  saveButton.onclick = saveNote();
+
 }
 
 function displayList() {
