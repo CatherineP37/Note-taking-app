@@ -36,7 +36,7 @@ function displayList() {
   }
 }
 
-function addNote() { 
+function saveNote() { 
   let noteInputValue = noteInput.value;  
   notes.push({
     id: makeId(),
