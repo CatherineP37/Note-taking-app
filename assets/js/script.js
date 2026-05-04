@@ -50,10 +50,9 @@ function makeId() {
   return Date.now().toString();
 }
 
-function editNote(i, note) {
-  const noteIndex = notes.findIndex(note => note.id === noteId)    
-  notes[noteIndex] = {
-    ...notes[noteIndex],
+function editNote(i, note) {      
+  notes[i] = {
+    ...notes[i],
     content: content,
   };
   displayList();
