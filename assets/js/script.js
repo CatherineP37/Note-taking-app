@@ -3,12 +3,11 @@ let noteInput = document.getElementById('note_input');
 let editInput = document.getElementById('edit_input');
 let editButton = document.getElementById('edit_button');
 let noteList = document.getElementById('note_list');
-let addModal = document.querySelector('.add');
-let editModal = document.querySelector('.edit');
+let modal = document.querySelector('.modal');
 let noteId = null;
 
-function openAddModal() {
-  addModal.classList.toggle('open');
+function openModal() {
+  modal.classList.toggle('open');
 }
 
 function displayList() {
