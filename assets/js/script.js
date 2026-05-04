@@ -50,12 +50,6 @@ function makeId() {
   return Date.now().toString();
 }
 
-function openEditModal(i, note) {
-  editModal.classList.toggle('open');
-  editInput.value = note.content;  
-  editButton.onclick = () => editNote(i, note);
-}
-
 function editNote(i, note) {
   const noteIndex = notes.findIndex(note => note.id === noteId)    
   notes[noteIndex] = {
