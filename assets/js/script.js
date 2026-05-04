@@ -75,17 +75,6 @@ function closeModal() {
   modal.classList.remove('show');
 }
 
-
-function editNote(i, note) {      
-  notes[i] = {
-    ...notes[i],
-    content: content,
-  };
-  displayList();
-}
-
-
-
 document.addEventListener("DOMContentLoaded", displayList)
 
 
