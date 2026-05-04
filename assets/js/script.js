@@ -6,24 +6,23 @@ let noteList = document.getElementById('note_list');
 let modal = document.querySelector('.modal');
 let noteIndex = null;
 
-function openModal(noteId = null) {
-  modal.classList.toggle('open');
-  let saveButton = document.getElementById('save_button')
+function saveNote() { 
+  let noteInputValue = noteInput.value;  
+  notes.push({
+    id: makeId(),
+    content: noteInputValue,
+  });
+  displayList();
+  noteInput.value = ''; 
+}
 
-  if(noteId) {
-    const noteToEdit = notes.find(note => note === noteId)
-    noteIndex = noteId;
-    document.getElementById('modalTitle').textContent = 'Edit note';    
-    noteInput.value = noteToEdit.content;
-    saveButton.textContent = 'EDIT';
-  } else {
-    noteIndex = null;
-    document.getElementById('modalTitle').textContent = 'Add note';
-    noteInput.value = '';
-    saveButton.textContent = 'ADD';
-  }
-  saveButton.onclick = saveNote();
+function makeId() {
+  return Date.now().toString();
+}
 
+function deleteNote(i) {
+  notes.splice(i, 1);
+  displayList();
 }
 
 function displayList() {
@@ -52,19 +51,31 @@ function displayList() {
   }
 }
 
-function saveNote() { 
-  let noteInputValue = noteInput.value;  
-  notes.push({
-    id: makeId(),
-    content: noteInputValue,
-  });
-  displayList();
-  noteInput.value = ''; 
+function openModal(noteId = null) {
+  modal.classList.toggle('open');
+  let saveButton = document.getElementById('save_button')
+
+  if(noteId) {
+    const noteToEdit = notes.find(note => note === noteId)
+    noteIndex = noteId;
+    document.getElementById('modalTitle').textContent = 'Edit note';    
+    noteInput.value = noteToEdit.content;
+    saveButton.textContent = 'EDIT';
+  } else {
+    noteIndex = null;
+    document.getElementById('modalTitle').textContent = 'Add note';
+    noteInput.value = '';
+    saveButton.textContent = 'ADD';
+  }
+  saveButton.onclick = saveNote();
+
 }
 
-function makeId() {
-  return Date.now().toString();
-}
+
+
+
+
+
 
 function editNote(i, note) {      
   notes[i] = {
@@ -74,10 +85,7 @@ function editNote(i, note) {
   displayList();
 }
 
-function deleteNote(i) {
-  notes.splice(i, 1);
-  displayList();
-}
+
 
 document.addEventListener("DOMContentLoaded", displayList)
 
