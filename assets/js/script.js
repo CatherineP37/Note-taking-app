@@ -71,10 +71,9 @@ function openModal(noteId = null) {
 
 }
 
-
-
-
-
+function closeModal() {
+  modal.classList.remove('show');
+}
 
 
 function editNote(i, note) {      
