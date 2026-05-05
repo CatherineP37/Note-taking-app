@@ -38,6 +38,10 @@ h1 {
     padding: 1rem;
 }
 
+.edit-modal {
+    display: none;
+}
+
 .open {    
     display: flex;
     flex-direction: column;
