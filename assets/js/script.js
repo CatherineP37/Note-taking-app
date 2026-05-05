@@ -20,8 +20,8 @@ function deleteNote(i) {
 
 function displayList() {
   noteList.innerHTML = null;
-  for(const[i, note] of Object.entries(notes)) {
-    const container = document.createElement('div');
+  forEach((note, i) => {
+     const container = document.createElement('div');
     container.className = 'note-container';
     const p = document.createElement('p');
     p.className = 'note-content';
@@ -41,7 +41,9 @@ function displayList() {
     buttonContainer.append(deleteButton);
     container.append(buttonContainer);
     noteList.append(container);
-  }
+  })
+   
+  
 }
 
 function editNote(i) {
