@@ -45,8 +45,7 @@ function displayList() {
 }
 
 function openModal() {
-  modal.classList.toggle('open');   
-  noteIndex = null;
+  modal.classList.toggle('open');  
   document.getElementById('modalTitle').textContent = 'Add note';
   noteInput.value = '';
 }
