@@ -45,23 +45,10 @@ function displayList() {
 }
 
 function openModal() {
-  modal.classList.toggle('open');
-  let saveButton = document.getElementById('save_button')
-
-  if(noteId) {
-    const noteToEdit = notes.find(note => note === noteId)
-    noteIndex = noteId;
-    document.getElementById('modalTitle').textContent = 'Edit note';    
-    noteInput.value = noteToEdit.content;
-    saveButton.textContent = 'EDIT';
-  } else {
-    noteIndex = null;
-    document.getElementById('modalTitle').textContent = 'Add note';
-    noteInput.value = '';
-    saveButton.textContent = 'ADD';
-  }
-  saveButton.onclick = saveNote();
-
+  modal.classList.toggle('open');   
+  noteIndex = null;
+  document.getElementById('modalTitle').textContent = 'Add note';
+  noteInput.value = '';
 }
 
 function closeModal() {
