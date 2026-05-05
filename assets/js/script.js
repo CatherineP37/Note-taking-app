@@ -51,7 +51,7 @@ function editNote(i) {
 }
 
 function openModal() {
-  modal.classList.toggle('open');  
+  modal.classList.add('open');  
 }
 
 function closeModal() {
