@@ -33,7 +33,7 @@ function displayNotes() {
     const editButton = document.createElement('button');
     editButton.className = 'edit-button';
     editButton.textContent = 'EDIT';
-    editButton.onclick = () => editNote(i);
+    editButton.onclick = () => editNote(i, note);
     const deleteButton = document.createElement('button');
     deleteButton.className = 'delete-button';
     deleteButton.textContent = 'DELETE';
@@ -48,8 +48,14 @@ function displayNotes() {
 }
 
 function editNote(i, note) {
-  editModal.classList.add('open');
-  document.getElementById('edit_input').value = note;
+  let editInput = document.getElementById('edit_input')
+  editInput.value = note;
+  document.getElementById('edit_button').onclick = () => {
+    let editedNote = editInput.value;
+    notes.splice(i, 1, editedNote);
+    displayNotes();
+  }
+  
 }
 
 function openAddModal() {

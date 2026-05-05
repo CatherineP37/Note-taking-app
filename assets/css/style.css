@@ -38,8 +38,12 @@ h1 {
     padding: 1rem;
 }
 
+.add-modal {
+    display: block;
+}
+
 .edit-modal {
-    display: none;
+    display: block;
 }
 
 .open {    
