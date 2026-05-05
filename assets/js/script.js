@@ -32,7 +32,7 @@ function displayList() {
     const editButton = document.createElement('button');
     editButton.className = 'edit-button';
     editButton.textContent = 'EDIT';
-    editButton.onclick = () => openModal(i);
+    editButton.onclick = () => editNote(i);
     const deleteButton = document.createElement('button');
     deleteButton.className = 'delete-button';
     deleteButton.textContent = 'DELETE';
