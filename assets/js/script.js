@@ -47,8 +47,9 @@ function displayNotes() {
   
 }
 
-function editNote(i) {
-  editModal.classList.add('open')  
+function editNote(i, note) {
+  editModal.classList.add('open');
+  document.getElementById('edit_input').value = note;
 }
 
 function openAddModal() {
