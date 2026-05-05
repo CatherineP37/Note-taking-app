@@ -3,8 +3,9 @@ let noteInput = document.getElementById('note_input');
 let editInput = document.getElementById('edit_input');
 let editButton = document.getElementById('edit_button');
 let noteList = document.getElementById('note_list');
-let modal = document.querySelector('.modal');
 let noteIndex = null;
+let addModal = document.getElementById('add-modal');
+let editModal = document.getElementById('edit-modal');
 
 function saveNote() { 
   let noteInputValue = noteInput.value;  
@@ -47,15 +48,19 @@ function displayNotes() {
 }
 
 function editNote(i) {
-  document.querySelector('.edit-modal').classList.add('.show')  
+  editModal.classList.add('open')  
 }
 
-function openModal() {
-  modal.classList.add('open');  
+function openAddModal() {
+  addModal.classList.add('open');  
 }
 
-function closeModal() {
-  modal.classList.remove('show');
+function closeAddModal() {
+ addModal.classList.remove('open');
+}
+
+function closeEditModal() {
+  editModal.classList.remove('open');
 }
 
 document.addEventListener("DOMContentLoaded", displayNotes)
