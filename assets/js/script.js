@@ -50,8 +50,6 @@ function editNote(i) {
 
 function openModal() {
   modal.classList.toggle('open');  
-  document.getElementById('modalTitle').textContent = 'Add note';
-  noteInput.value = '';
 }
 
 function closeModal() {
