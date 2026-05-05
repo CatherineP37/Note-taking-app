@@ -44,7 +44,7 @@ function displayList() {
   }
 }
 
-function openModal(noteId = null) {
+function openModal() {
   modal.classList.toggle('open');
   let saveButton = document.getElementById('save_button')
 
