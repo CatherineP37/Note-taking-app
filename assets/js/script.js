@@ -13,10 +13,6 @@ function saveNote() {
   noteInput.value = ''; 
 }
 
-function makeId() {
-  return Date.now().toString();
-}
-
 function deleteNote(i) {
   notes.splice(i, 1);
   displayList();
