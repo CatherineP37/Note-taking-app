@@ -44,6 +44,10 @@ function displayList() {
   }
 }
 
+function editNote(i) {
+  document.querySelector('.edit-modal').classList.add('.show')  
+}
+
 function openModal() {
   modal.classList.toggle('open');  
   document.getElementById('modalTitle').textContent = 'Add note';
