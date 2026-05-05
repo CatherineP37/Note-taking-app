@@ -8,10 +8,7 @@ let noteIndex = null;
 
 function saveNote() { 
   let noteInputValue = noteInput.value;  
-  notes.push({
-    id: makeId(),
-    content: noteInputValue,
-  });
+  notes.push(noteInputValue);
   displayList();
   noteInput.value = ''; 
 }
