@@ -9,16 +9,16 @@ let noteIndex = null;
 function saveNote() { 
   let noteInputValue = noteInput.value;  
   notes.push(noteInputValue);
-  displayList();
+  displayNotes();
   noteInput.value = ''; 
 }
 
 function deleteNote(i) {
   notes.splice(i, 1);
-  displayList();
+  displayNotes();
 }
 
-function displayList() {
+function displayNotes() {
   noteList.innerHTML = null;
   forEach((note, i) => {
      const container = document.createElement('div');
@@ -58,6 +58,6 @@ function closeModal() {
   modal.classList.remove('show');
 }
 
-document.addEventListener("DOMContentLoaded", displayList)
+document.addEventListener("DOMContentLoaded", displayNotes)
 
 
