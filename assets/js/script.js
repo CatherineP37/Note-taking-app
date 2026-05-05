@@ -20,7 +20,7 @@ function deleteNote(i) {
 
 function displayNotes() {
   noteList.innerHTML = null;
-  forEach((note, i) => {
+  notes.forEach((note, i) => {
      const container = document.createElement('div');
     container.className = 'note-container';
     const p = document.createElement('p');
